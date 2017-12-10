@@ -5,3 +5,6 @@ Post_date : <%= @day.post_date %> <br>
 NOTE: <%= @day.note %> <br>
 
 <%= link_to "Edit", edit_growing_thing_day_path(@day.growing_thing, @day) %>
+
+<%= link_to "<--", growing_thing_day_path(@day.growing_thing, @yesterday) if @yesterday%>
+<%= link_to "-->", growing_thing_day_path(@day.growing_thing, @tomorrow) if @tomorrow%>

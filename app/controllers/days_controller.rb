@@ -12,6 +12,15 @@ class DaysController < ApplicationController
         redirect_to users_profile_path(current_user), alert: "Day not found"
       else
         @day = @growing_thing.days.find_by(id: params[:id])
+
+        if @growing_thing.days.find_by(post_date: @day.post_date.yesterday)
+          @yesterday = @growing_thing.days.find_by(post_date: @day.post_date.yesterday)
+        end
+
+        if @growing_thing.days.find_by(post_date: @day.post_date.tomorrow)
+          @tomorrow = @growing_thing.days.find_by(post_date: @day.post_date.tomorrow)
+        end
+
       end
     else
       @day = Day.find(params[:id])
