@@ -14,7 +14,6 @@
 //= require turbolinks
 //= require jquery
 //= require jquery_ujs
-//= require jquery.jcrop
-//= require papercrop
+//= require jquery.Jcrop
 //= require bootstrap-sprockets
 //= require_tree .
