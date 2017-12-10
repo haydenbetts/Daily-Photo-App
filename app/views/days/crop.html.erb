@@ -2,22 +2,14 @@
 
 <%# TODO crop functionality not working at all!! But making it work will
 give u some js practice :) %>
-<% if false %>
-  <%= image_tag @day.image.url(:large), :id => "cropbox" %>
+  <%= image_tag @day.image_url(:medium).to_s, :id => "cropbox" %>
 
   <%= form_for @day do |f| %>
 
     <% ["x", "y", "w", "h"].each do |dimension| %>
 
-      <%= f.text_field  "crop_#{dimension}" %><br>
+      <%= f.hidden_field  "crop_#{dimension}" %><br>
     <% end %>
 
     <%= f.submit "Crop" %>
   <% end %>
-<% end %>
-
-<%= form_for @day do |f| %>
-  <%= f.cropbox :image %>
-  <%= f.crop_preview :image %>
-  <%= f.submit 'Save' %>
-<% end %>

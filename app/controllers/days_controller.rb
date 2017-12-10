@@ -66,9 +66,8 @@ def create
     if params[:day][:image].blank?
       redirect_to growing_thing_day_path(@day.growing_thing, @day), alert: "Changes saved"
     else
-      redirect_to growing_thing_day_path(@day.growing_thing, @day), alert: "Changes saved"
-    # else
-    #   render :action => "crop"
+      #redirect_to growing_thing_day_path(@day.growing_thing, @day), alert: "Changes saved"
+      render :action => "crop"
     end
   else
     render :new
@@ -82,8 +81,8 @@ def update
     if params[:day][:image].blank?
       redirect_to growing_thing_day_path(@day.growing_thing, @day), alert: "Changes saved"
      else
-      redirect_to growing_thing_day_path(@day.growing_thing, @day), alert: "Changes saved"
-    #   render :action => "crop"
+      #redirect_to growing_thing_day_path(@day.growing_thing, @day), alert: "Changes saved"
+      render :action => "crop"
     end
   else
     render :edit
