@@ -1,0 +1,18 @@
+<%= @user.name %>
+
+<% @user.growing_things.each do |growing_thing| %>
+  <%= render partial: "growing_things/calendar", locals: {growing_thing: growing_thing} %>
+<% end %>
+
+<% if false %>
+<ul>
+<% @user.growing_things.each do |growing_thing| %>
+  <li> <%= growing_thing.name %> </li>
+    <ul>
+      <% growing_thing.days.each do |day| %>
+        <li> <%= day.post_date %> : <%= day.note %> </li>
+      <% end %>
+    </ul>
+<% end %>
+</ul>
+<% end %>

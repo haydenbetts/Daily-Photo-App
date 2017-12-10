@@ -1,0 +1,7 @@
+Post_date : <%= @day.post_date %> <br>
+
+<%= image_tag @day.image.url(:square) %>
+
+NOTE: <%= @day.note %> <br>
+
+<%= link_to "Edit", edit_growing_thing_day_path(@day.growing_thing, @day) %>
