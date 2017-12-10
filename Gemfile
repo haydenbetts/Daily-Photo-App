@@ -44,6 +44,8 @@ gem 'jquery-rails'
 gem 'cropper-rails'
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'carrierwave'
+gem 'carrierwave_direct'
+gem 'sidekiq'
 gem 'fog'
 gem 'rmagick'
 
