@@ -1,6 +1,6 @@
 Post_date : <%= @day.post_date %> <br>
 
-<%= image_tag @day.image.url(:square) %>
+<%= image_tag @day.image_url(:medium).to_s %>
 
 NOTE: <%= @day.note %> <br>
 

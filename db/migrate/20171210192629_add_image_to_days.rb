@@ -1,5 +1,7 @@
 class AddImageToDays < ActiveRecord::Migration[5.1]
   def change
-      add_attachment :days, :image
+    change_table :days do |t|
+     t.string :image
+    end
   end
 end

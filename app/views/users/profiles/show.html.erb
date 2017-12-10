@@ -5,6 +5,9 @@
 <% end %>
 
 <% if false %>
+
+<%= render partial: "growing_things/form", locals: {growing_thing => GrowingThing.new} %>
+
 <ul>
 <% @user.growing_things.each do |growing_thing| %>
   <li> <%= growing_thing.name %> </li>

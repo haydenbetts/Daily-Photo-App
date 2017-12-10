@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-john_doe = User.create! :name => 'John Doe', :email => 'john8@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
+john_doe = User.create! :name => 'John Doe', :email => 'john18@gmail.com', :password => 'topsecret', :password_confirmation => 'topsecret'
 pine_tree = GrowingThing.create :name => "The Pine Tree Outside"
 baby_boy = GrowingThing.create :name => "Baby Boy"
 

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171208025251) do
+ActiveRecord::Schema.define(version: 20171210192629) do
 
   create_table "days", force: :cascade do |t|
     t.datetime "post_date"
@@ -19,10 +19,7 @@ ActiveRecord::Schema.define(version: 20171208025251) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "day_url"
-    t.string "image_file_name"
-    t.string "image_content_type"
-    t.integer "image_file_size"
-    t.datetime "image_updated_at"
+    t.string "image"
     t.index ["growing_thing_id"], name: "index_days_on_growing_thing_id"
   end
 
