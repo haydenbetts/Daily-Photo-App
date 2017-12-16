@@ -17,14 +17,29 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+/********* BOOTSTRAP MODS **********/
+
+.header {
+  background-color: #169545;
+  border-style: solid;
+  border: #000000;
+}
+
 /*********   DEVISE MENU ***********/
 
 ul.hmenu {
+  text-align: center;
   list-style: none;
   margin: 0 0 2em;
   padding: 0;
 }
 
 ul.hmenu li {
+  font-family: "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 30px;
+  padding: 6px;
   display: inline;
+  a {
+    color: #fff;
+  }
 }

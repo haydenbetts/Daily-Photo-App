@@ -1,17 +1,19 @@
-<%= growing_thing.name %>
 
 <div id="calendar">
-  <%= calendar do |date| %>
-    <%= date.day %>
-
+  <div class="growing_thing_name">
+  <%= growing_thing.name %>
+</div>
+  <%= calendar(growing_thing) do |date| %>
 
     <% if existing_day = growing_thing.days.detect do |day| %>
         <% day.post_date == date %>
         <% end %>
       <%= link_to image_tag(existing_day.image_url(:thumb).to_s, border: 0), growing_thing_day_path(growing_thing, existing_day) %>
     <% elsif date < Date.today %>
-        Cannot upload photographs for past days
+      <%= date.day %>
+
     <% else %>
+      <%= date.day %>
       <%= link_to 'Create new day', new_growing_thing_day_path(:growing_thing_id => growing_thing.id, :post_date => date) %>
     <% end %>
 

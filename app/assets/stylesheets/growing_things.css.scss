@@ -2,14 +2,23 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .calendar {
-  border-collapse: collapse;
+  text-align: center;
+  border-collapse: separate;
+  border-spacing: 5px;
   width: 100%;
+
+  #growing_thing_name {
+    text-align: center;
+    font-family: "Lucida Grande", arial, helvetica, sans-serif;
+    font-size: 10px;
+    padding: 6px;
+  }
 
   td, th {
     font-family: "Lucida Grande", arial, helvetica, sans-serif;
     font-size: 10px;
     padding: 6px;
-    border: 1px solid #999;
+    // border: 1px solid #999;
   }
 
   th {
@@ -23,12 +32,43 @@
     background: #FFF;
     color: #777;
     height: 80px;
-    vertical-align: top;
-    font-size: 16px;
+    vertical-align: center;
+    text-align: center;
+    font-size: 30px;
+
   }
 
   .notmonth, .notmonth a { color: #CCC; }
   .today { background-color: #D7F2FF; }
+  .past {
+    border-radius: 5px 20px 5px;
+    border-style: solid;
+    border-color: #DB544A;
+    border-width: 1px;
+    padding: 10px;
+
+    &:hover {
+      background-color: #e8928b;
+    }
+  }
+  .photo {
+    //background-color: #D0D9A2;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #D0D9A2;
+
+    img {
+      -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    }
+
+    &:hover {
+      border-style: solid;
+      border-width: 1px;
+      border-color: #A3B449;
+      background-color: #0000;
+    }
+
+  }
 }
 
 #month {

@@ -1,9 +1,9 @@
 module CalendarHelper
-  def calendar(date = Date.today, &block)
-    Calendar.new(self, date, block).table
+  def calendar(date = Date.today, growing_thing, &block)
+    Calendar.new(self, date, growing_thing, block).table
   end
 
-  class Calendar < Struct.new(:view, :date, :callback)
+  class Calendar < Struct.new(:view, :date, :growing_thing, :callback)
     HEADER = %w[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
     START_DAY = :sunday
 
@@ -35,6 +35,9 @@ module CalendarHelper
 
     def day_classes(day)
       classes = []
+
+      classes << "photo" if growing_thing.days.detect {|photo_day| photo_day.post_date == day} 
+      classes << "past" if day < Date.today
       classes << "today" if day == Date.today
       classes << "notmonth" if day.month != date.month
       classes.empty? ? nil : classes.join(" ")
