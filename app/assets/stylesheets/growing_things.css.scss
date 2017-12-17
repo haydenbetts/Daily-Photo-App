@@ -38,9 +38,9 @@
     background: #FFF;
     color: #777;
     height: 80px;
-    vertical-align: center;
-    text-align: center;
-    font-size: 30px;
+    vertical-align: top;
+    text-align: left;
+    font-size: 15px;
 
   }
 
@@ -71,6 +71,26 @@
     }
 
   }
+
+  .upload-image {
+      height:30px;
+      width: 30px;
+      background-image: url(image_path('plus.png'));
+      background-size: 30px 30px;
+      background-repeat:no-repeat;
+
+        .hover-image {
+          display: none;
+        }
+
+  }
+
+  .upload-image:hover {
+      .hover-image {
+        display: block;
+      }
+  }
+  
 }
 
 #month {

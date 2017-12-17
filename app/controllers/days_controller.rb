@@ -53,6 +53,7 @@ def new
     else
       # TODO we need to pass in the
       @day = Day.new(post_date: params[:post_date])
+      @day.growing_thing_id = @growing_thing.id
     end
   else
     @day = Day.find(params[:id])

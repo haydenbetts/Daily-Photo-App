@@ -1,11 +1,17 @@
 <%= form_for(growing_thing)  do |f| %>
 
-  <%= f.label :name %>
+  <%= f.label :name, "Growing Thing Name" %>
   <%= f.text_field :name %>
 
   <%= f.hidden_field :user_id %>
 
-  <%= f.submit %>
+
+  <% if params[:id] %>
+    <%= f.submit :Save, class: 'btn btn-success' %>
+  <% else %>
+    <%= f.submit :Create, class: 'btn btn-success' %>
+  <% end %>
+
 <% end %>
 
 <%= link_to("Delete", growing_thing_path(growing_thing), method: :delete, class: "btn btn-danger") if params[:id]%>

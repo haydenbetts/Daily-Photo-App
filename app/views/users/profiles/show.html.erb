@@ -1,10 +1,8 @@
 <% if @user.growing_things[0].nil?  %>
-  <div id="buttonrow" class="row">
-    <div class="col-sm-4">
-     </div>
 
-    <div class="col-sm-4">
-      <a href="<%= new_growing_thing_path %>" class="btn btn-primary">Create New Growing Thing</a>
+    <div class="text-center">
+      To get started all you have to do is....
+      <a href="<%= new_growing_thing_path %>" class="btn btn-primary">Create A New Growing Thing</a>
     </div>
   </div>
 <% else %>
