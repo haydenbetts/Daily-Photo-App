@@ -1,21 +1,35 @@
-Welcome, <%= @user.name %>
+<% if @user.growing_things[0].nil?  %>
+  <div id="buttonrow" class="row">
+    <div class="col-sm-4">
+     </div>
 
-  <% @user.growing_things.each do |growing_thing| %>
-    <%= render partial: "growing_things/calendar", locals: {growing_thing: growing_thing} %>
-  <% end %>
+    <div class="col-sm-4">
+      <a href="<%= new_growing_thing_path %>" class="btn btn-primary">Create New Growing Thing</a>
+    </div>
+  </div>
+<% else %>
 
-<% if false %>
+  <p id="user-page-growing-things-heading"> My Growing Things: </p>
+  <div class="panel-group" id="accordion">
 
-<%= render partial: "growing_things/form", locals: {growing_thing => GrowingThing.new} %>
+    <% @user.growing_things.each_with_index do |growing_thing, index| %>
 
-<ul>
-<% @user.growing_things.each do |growing_thing| %>
-  <li> <%= growing_thing.name %> </li>
-    <ul>
-      <% growing_thing.days.each do |day| %>
-        <li> <%= day.post_date %> : <%= day.note %> </li>
-      <% end %>
-    </ul>
-<% end %>
-</ul>
+   <div class="panel panel-default">
+     <div class="panel-heading">
+       <h4 class="panel-title">
+         <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse<%= index %>">
+           <%= link_to growing_thing.name, edit_growing_thing_path(growing_thing) %>
+         </a>
+       </h4>
+     </div>
+     <div id="collapse<%= index %>" class="panel-collapse collapse">
+       <div class="panel-body">
+         <a id="edit-button" href='<%= edit_growing_thing_path(growing_thing) %>'><span class='glyphicon glyphicon-cog'></span></a>
+         <%= render partial: "growing_things/calendar", locals: {growing_thing: growing_thing} %>
+       </div>
+     </div>
+   </div>
+   </div>
+   <% end %>
+  </div>
 <% end %>

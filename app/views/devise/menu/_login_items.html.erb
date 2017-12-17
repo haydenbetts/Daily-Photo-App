@@ -1,5 +1,8 @@
   <% if user_signed_in? %>
     <li>
+      <%= link_to 'Create Growing Thing', new_growing_thing_path %>
+    </li>
+    <li>
     <%= link_to('My Profile', users_profile_path(current_user)) %>
     </li>
     <li>

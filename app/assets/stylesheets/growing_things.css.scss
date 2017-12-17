@@ -1,6 +1,12 @@
 // Place all the styles related to the growing_things controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#user-page-growing-things-heading {
+  font-family: "Lucida Grande", arial, helvetica, sans-serif;
+  font-size: 20px;
+  padding: 6px;
+}
+
 .calendar {
   text-align: center;
   border-collapse: separate;
@@ -56,10 +62,6 @@
     border-style: solid;
     border-width: 1px;
     border-color: #D0D9A2;
-
-    img {
-      -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
-    }
 
     &:hover {
       border-style: solid;

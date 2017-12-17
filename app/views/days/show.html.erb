@@ -1,10 +1,25 @@
-Post_date : <%= @day.post_date %> <br>
+<div class="photo-show-table">
+  <div class="row vertical-align">
+    <div class="col-sm-2 arrow center-block">
+      <%= link_to "<- Previous", growing_thing_day_path(@day.growing_thing, @yesterday) if @yesterday%>
+    </div>
+    <div class="col-sm-4" align="center">
+      <%= @day.post_date.strftime("%m/%d/%Y") %>
+      <a id="edit-button" href='<%= edit_growing_thing_day_path(@day.growing_thing, @day) %>'>Edit <span class='glyphicon glyphicon-cog'></span></a>
+      <%= image_tag @day.image_url(:medium).to_s %>
+    </div>
+    <div class="col-sm-2 arrow center-block">
+      <%= link_to "Next ->", growing_thing_day_path(@day.growing_thing, @tomorrow) if @tomorrow%>
+    </div>
+  </div>
 
-<%= image_tag @day.image_url(:medium).to_s %>
+  <div class="row vertical-align">
 
-NOTE: <%= @day.note %> <br>
+      <div class="col-sm-4">
+    </div>
+    <div class="col-sm-4">
+      Note: <%= @day.note %>
+    </div>
 
-<%= link_to "Edit", edit_growing_thing_day_path(@day.growing_thing, @day) %>
-
-<%= link_to "<--", growing_thing_day_path(@day.growing_thing, @yesterday) if @yesterday%>
-<%= link_to "-->", growing_thing_day_path(@day.growing_thing, @tomorrow) if @tomorrow%>
+</div>
+</div>

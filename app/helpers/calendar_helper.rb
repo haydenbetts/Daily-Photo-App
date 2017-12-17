@@ -10,7 +10,7 @@ module CalendarHelper
     delegate :content_tag, to: :view
 
     def table
-      content_tag :table, class: "calendar" do
+      content_tag :table, class: "table calendar" do
         header + week_rows
       end
     end
@@ -36,7 +36,7 @@ module CalendarHelper
     def day_classes(day)
       classes = []
 
-      classes << "photo" if growing_thing.days.detect {|photo_day| photo_day.post_date == day} 
+      classes << "photo" if growing_thing.days.detect {|photo_day| photo_day.post_date == day}
       classes << "past" if day < Date.today
       classes << "today" if day == Date.today
       classes << "notmonth" if day.month != date.month

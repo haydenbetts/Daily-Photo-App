@@ -3,5 +3,9 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.hidden_field :user_id %>
+
   <%= f.submit %>
 <% end %>
+
+<%= link_to("Delete", growing_thing_path(growing_thing), method: :delete, class: "btn btn-danger") if params[:id]%>

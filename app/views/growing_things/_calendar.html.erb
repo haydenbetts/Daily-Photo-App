@@ -1,8 +1,4 @@
-
 <div id="calendar">
-  <div class="growing_thing_name">
-  <%= growing_thing.name %>
-</div>
   <%= calendar(growing_thing) do |date| %>
 
     <% if existing_day = growing_thing.days.detect do |day| %>
@@ -18,4 +14,3 @@
     <% end %>
 
   <% end %>
-</div>

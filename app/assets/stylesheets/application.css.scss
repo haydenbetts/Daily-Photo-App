@@ -19,27 +19,79 @@
 
 /********* BOOTSTRAP MODS **********/
 
-.header {
+body {
+    padding-top: 150px;
+}
+
+.navbar {
   background-color: #169545;
   border-style: solid;
   border: #000000;
+
+}
+
+#buttonrow {
+  padding-bottom: 20px;
+  align-items: center;
+}
+
+.btn-outline-secondary {
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+/********* ACCORDIAN COLLAPSE ******/
+
+.panel-heading .accordion-toggle:after {
+    /* symbol for "opening" panels */
+    font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+    content: "\e114";    /* adjust as needed, taken from bootstrap.css */
+    float: right;        /* adjust as needed */
+    color: grey;         /* adjust as needed */
+}
+.panel-heading .accordion-toggle.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\e080";    /* adjust as needed, taken from bootstrap.css */
+}
+
+#edit-button {
+  float: right;        /* adjust as needed */
+  color: grey;         /* adjust as needed */
 }
 
 /*********   DEVISE MENU ***********/
 
-ul.hmenu {
-  text-align: center;
-  list-style: none;
-  margin: 0 0 2em;
-  padding: 0;
+.nav > li > a {
+  margin-right: 5px;
+  margin-left: 5px;
+
 }
 
-ul.hmenu li {
-  font-family: "Lucida Grande", arial, helvetica, sans-serif;
-  font-size: 30px;
-  padding: 6px;
-  display: inline;
-  a {
-    color: #fff;
+.navbar-default .navbar-nav > li > a {
+  color: white;
+
+    &:hover {
+    color: white;
+    text-decoration: underline;
   }
+}
+
+.navbar-default .navbar-brand {
+
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    color: white;
+
+    &:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+}
+
+.navbar-toggle {
+    z-index:3;
 }
