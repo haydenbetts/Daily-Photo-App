@@ -10,8 +10,8 @@ $ ->
     #       window.location = document.querySelector('#previous a').href
     #     else if e.which == 39 && document.querySelector('#next a').href
     #       window.location = document.querySelector('#next a').href
-    #
-  new AvatarCropper()
+
+new AvatarCropper()
 
 class AvatarCropper
   constructor: ->
