@@ -4,13 +4,13 @@
 
 # this makes sure that the dom is loaded...
 $ ->
-    $(".days.show").ready ->
-      $('body').keydown (e) ->
-        if e.which == 37 && document.querySelector('#previous a').href
-          window.location = document.querySelector('#previous a').href
-        else if e.which == 39 && document.querySelector('#next a').href
-          window.location = document.querySelector('#next a').href
-
+    # $(".days.show").ready ->
+    #   $('body').keydown (e) ->
+    #     if e.which == 37 && document.querySelector('#previous a').href
+    #       window.location = document.querySelector('#previous a').href
+    #     else if e.which == 39 && document.querySelector('#next a').href
+    #       window.location = document.querySelector('#next a').href
+    #
   new AvatarCropper()
 
 class AvatarCropper
