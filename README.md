@@ -1,24 +1,7 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A daily photo journal app built using Rails. I use AWS S3 to store photos.
 
-Things you may want to cover:
+![Screenshot](https://i.imgur.com/V09Qazi.png)
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+See in production at https://watch-things-grow.herokuapp.com/
